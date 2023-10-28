@@ -1,0 +1,18 @@
+﻿@*@model ASP_NET_INMN2_PA2.Pages.Shared._IndexPartialModel*@
+
+<ul class="navbar-nav flex-grow-1">
+@{
+    (string Ścieżka, string Nazwa)[] strony =
+    {
+        ("Index", "Start"),
+        ("Privacy", "Polityka prywatność"),
+        ("Miasta/Index", "Miasta")
+    };
+    foreach ((string Ścieżka, string Nazwa) strona in strony)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/@strona.Ścieżka">@strona.Nazwa</a>
+        </li>
+    }
+}
+</ul>
